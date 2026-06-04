@@ -51,6 +51,7 @@ export default function About() {
                                 src="/sekhar.png"
                                 alt="Sekhar Kurapati"
                                 fill
+                                sizes="(max-width: 768px) 100vw, 320px"
                                 className="object-cover object-top"
                                 priority
                             />
