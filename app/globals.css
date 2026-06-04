@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode for Tailwind v4 (required for next-themes) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* Dark theme (default) */
+:root,
+.dark {
+  --background: #000000;
+  --foreground: #fafafa;
+  --dot-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Light theme */
+.light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --dot-color: rgba(0, 0, 0, 0.06);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--background);
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
