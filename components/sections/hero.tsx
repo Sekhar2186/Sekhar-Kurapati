@@ -29,22 +29,23 @@ export default function Hero() {
                     </p>
 
                     {/* CTA Buttons */}
-                    <div className="mt-8 flex flex-wrap gap-4 items-center">
+                    <div className="mt-8 flex gap-3 md:gap-4 items-center w-full md:w-auto">
                         <Link
                             href="Resume_Sekhar.pdf"
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold hover:opacity-90 transition-opacity"
+                            className="inline-flex items-center justify-center gap-1.5 px-3 py-3 md:px-6 md:py-3 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold hover:opacity-90 transition-opacity flex-1 md:flex-none text-xs sm:text-sm md:text-base text-center"
                         >
-                            Resume/CV
-                            <ArrowRight className="h-4 w-4" />
+                            <span className="whitespace-nowrap">Resume/CV</span>
+                            <ArrowRight className="h-4 w-4 shrink-0" />
                         </Link>
                         <Link
                             href="/contact"
-                            className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold border transition-all
+                            className="inline-flex items-center justify-center px-3 py-3 md:px-6 md:py-3 rounded-lg font-semibold border transition-all
                                 bg-white dark:bg-transparent
                                 text-neutral-700 dark:text-neutral-300
                                 border-neutral-200 dark:border-neutral-800
                                 hover:bg-neutral-50 dark:hover:bg-neutral-900
-                                hover:border-neutral-300 dark:hover:border-neutral-700"
+                                hover:border-neutral-300 dark:hover:border-neutral-700
+                                flex-1 md:flex-none text-xs sm:text-sm md:text-base text-center whitespace-nowrap"
                         >
                             Get In Touch!
                         </Link>

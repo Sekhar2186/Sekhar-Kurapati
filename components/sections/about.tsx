@@ -46,7 +46,7 @@ export default function About() {
                     <div className="relative group">
                         {/* Ambient glow behind image */}
                         <div className="absolute -inset-1 rounded-3xl bg-linear-to-r from-purple-600 to-indigo-600 opacity-20 blur-lg group-hover:opacity-40 transition duration-300" />
-                        <div className="relative w-[320px] h-[380px] overflow-hidden rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 transition-transform duration-500 group-hover:scale-[1.02]">
+                        <div className="relative w-[280px] h-[330px] sm:w-[320px] sm:h-[380px] overflow-hidden rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 transition-transform duration-500 group-hover:scale-[1.02]">
                             <Image
                                 src="/sekhar.png"
                                 alt="Sekhar Kurapati"

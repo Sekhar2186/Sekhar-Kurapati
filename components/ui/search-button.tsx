@@ -177,6 +177,8 @@ export function GooeyInput({
     const surfaceClass =
         "bg-foreground text-background shadow-sm ring-1 ring-border/60";
 
+    const showInput = isExpanded || collapsedWidth >= 80;
+
     return (
         <div
             className={cn(
@@ -206,8 +208,9 @@ export function GooeyInput({
                         disabled={disabled}
                         onClick={handleExpand}
                         className={cn(
-                            "flex h-10 w-full cursor-pointer items-center justify-center gap-2 rounded-full px-4 text-sm font-medium outline-none transition-[color,box-shadow] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50",
+                            "flex h-10 w-full cursor-pointer items-center justify-center rounded-full text-sm font-medium outline-none transition-[color,box-shadow,padding,gap] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50",
                             surfaceClass,
+                            showInput ? "px-4 gap-2" : "px-0 gap-0",
                             classNames?.trigger,
                         )}
                     >
@@ -226,7 +229,8 @@ export function GooeyInput({
                             disabled={disabled || !isExpanded}
                             placeholder={placeholder}
                             className={cn(
-                                "h-full min-w-0 flex-1 bg-transparent text-sm text-background outline-none",
+                                "h-full min-w-0 bg-transparent text-sm text-background outline-none transition-[width,opacity] duration-200",
+                                showInput ? "flex-1 opacity-100 ml-1" : "w-0 opacity-0 pointer-events-none",
                                 isExpanded
                                     ? "placeholder:text-background/50 dark:placeholder:text-background/45"
                                     : "pointer-events-none placeholder:text-background/80 dark:placeholder:text-background/70",

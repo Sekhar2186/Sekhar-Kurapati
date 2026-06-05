@@ -22,31 +22,30 @@ const skillCategories = [
   {
     label: "AI / ML",
     color: "violet",
-    skills: ["PyTorch", "TensorFlow", "scikit-learn", "LangChain", "LangGraph", "OpenCV", "Pandas", "NumPy", "Hugging Face"],
+    skills: ["PyTorch", "TensorFlow", "scikit-learn", "LangChain", "LangGraph", "OpenCV", "Hugging Face", "Pandas", "NumPy"],
   },
   {
-    label: "Tools & DevOps",
+    label: "Tools",
     color: "blue",
-    skills: ["Git", "Docker", "Linux", "CI/CD", "Vercel", "pnpm", "Turbo", "MongoDB", "Redis"],
+    skills: ["Git", "Docker", "CI/CD", "Vercel", "pnpm", "Turbo", "MongoDB", "Redis"],
   },
 ];
 
 const colorMap: Record<string, { badge: string }> = {
   indigo: { badge: "bg-indigo-500/10 text-indigo-500 border-indigo-500/20" },
   purple: { badge: "bg-purple-500/10 text-purple-500 border-purple-500/20" },
-  pink:   { badge: "bg-pink-500/10 text-pink-500 border-pink-500/20" },
+  pink: { badge: "bg-pink-500/10 text-pink-500 border-pink-500/20" },
   violet: { badge: "bg-violet-500/10 text-violet-500 border-violet-500/20" },
-  blue:   { badge: "bg-blue-500/10 text-blue-500 border-blue-500/20" },
+  blue: { badge: "bg-blue-500/10 text-blue-500 border-blue-500/20" },
 };
 
 // Extras shown as icon tiles in the "Also familiar with" section
 const extraTools = [
   // User requested
-  "Kaggle", "Firebase", "Supabase", "Vercel", "GitHub",
-  "Pandas", "NumPy", "MongoDB", "Jupyter",
+  "Kaggle", "Firebase", "Supabase", "GitHub", "Jupyter",
   // Additional
-  "OpenAI", "Streamlit", "Google Colab", "Ollama",
-  "Postman", "Figma", "Notion", "Flask", "Prisma",
+  "Streamlit", "Google Colab", "Ollama",
+  "Postman", "Notion", "Flask", "Prisma",
 ];
 
 export default function Skills() {

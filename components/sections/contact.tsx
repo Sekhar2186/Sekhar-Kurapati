@@ -94,7 +94,7 @@ export default function Contact() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 {/* Left Side: Contact details */}
                 <div className="lg:col-span-5 flex flex-col gap-6">
-                    <div className="rounded-3xl border p-8 bg-white dark:bg-neutral-950/80 border-neutral-100 dark:border-neutral-900 shadow-sm dark:shadow-none">
+                    <div className="rounded-3xl border p-5 sm:p-8 bg-white dark:bg-neutral-950/80 border-neutral-100 dark:border-neutral-900 shadow-sm dark:shadow-none">
                         <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6">
                             Contact Information
                         </h3>
@@ -119,12 +119,12 @@ export default function Contact() {
                                                     href={detail.href}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="block text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-purple-500 dark:hover:text-purple-400 transition-colors"
+                                                    className="block text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-purple-500 dark:hover:text-purple-400 transition-colors break-all"
                                                 >
                                                     {detail.value}
                                                 </a>
                                             ) : (
-                                                <span className="block text-sm font-semibold text-neutral-800 dark:text-neutral-200">
+                                                <span className="block text-sm font-semibold text-neutral-800 dark:text-neutral-200 break-all">
                                                     {detail.value}
                                                 </span>
                                             )}

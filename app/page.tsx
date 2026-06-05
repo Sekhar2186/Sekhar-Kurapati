@@ -59,9 +59,7 @@ export default function Home() {
         <section className="max-w-7xl mx-auto px-6 md:px-12 py-20 border-t border-neutral-100 dark:border-neutral-900/60">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <span className="text-purple-500 font-semibold text-sm uppercase tracking-widest">
-                Portfolios
-              </span>
+
               <h2 className="text-3xl md:text-4xl font-bold mt-2">
                 Featured Projects
               </h2>

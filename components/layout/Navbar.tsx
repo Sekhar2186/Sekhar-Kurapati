@@ -23,12 +23,15 @@ export default function Navbar() {
     const [searchQuery, setSearchQuery] = useState("");
     const router = useRouter();
     const dropdownRef = useRef<HTMLDivElement>(null);
+    const dropdownRefMobile = useRef<HTMLDivElement>(null);
 
     useEffect(() => setMounted(true), []);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+            const clickedOutsideDesktop = !dropdownRef.current || !dropdownRef.current.contains(event.target as Node);
+            const clickedOutsideMobile = !dropdownRefMobile.current || !dropdownRefMobile.current.contains(event.target as Node);
+            if (clickedOutsideDesktop && clickedOutsideMobile) {
                 setSearchQuery("");
             }
         };
@@ -150,16 +153,59 @@ export default function Navbar() {
                     </button>
                 </div>
 
-                {/* Mobile Toggle */}
-                <button
-                    className="md:hidden p-2 transition-colors
-                        text-neutral-500 dark:text-neutral-400
-                        hover:text-neutral-900 dark:hover:text-white"
-                    onClick={() => setIsOpen(!isOpen)}
-                    aria-label="Toggle menu"
-                >
-                    {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                </button>
+                {/* Mobile Actions: Search & Hamburger */}
+                <div className="flex items-center gap-2 md:hidden">
+                    <div ref={dropdownRefMobile} className="relative">
+                        <div className="flex h-12 items-center justify-center">
+                            <GooeyInput
+                                placeholder="Search..."
+                                value={searchQuery}
+                                onValueChange={setSearchQuery}
+                                collapsedWidth={40}
+                                expandedWidth={160}
+                                expandedOffset={0}
+                            />
+                        </div>
+                        {searchQuery.trim() !== "" && (
+                            <div className="absolute right-0 top-14 w-72 max-h-96 overflow-y-auto rounded-2xl border border-neutral-100 dark:border-neutral-800 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-md shadow-2xl p-2.5 z-50 flex flex-col gap-1.5 transition-all">
+                                {filteredProjects.length > 0 ? (
+                                    filteredProjects.map((project) => (
+                                        <button
+                                            key={project.id}
+                                            onClick={() => {
+                                                setSearchQuery("");
+                                                router.push(`/projects/${project.id}`);
+                                            }}
+                                            className="w-full flex flex-col text-left p-3 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors cursor-pointer group"
+                                        >
+                                            <span className="font-bold text-sm text-neutral-900 dark:text-white group-hover:text-purple-500 transition-colors">
+                                                {project.title}
+                                            </span>
+                                            <span className="text-xs text-neutral-500 dark:text-neutral-400 line-clamp-1 mt-0.5">
+                                                {project.description}
+                                            </span>
+                                            <span className="text-[10px] uppercase font-extrabold tracking-wider text-purple-500 dark:text-purple-400 mt-1">
+                                                {project.category}
+                                            </span>
+                                        </button>
+                                    ))
+                                ) : (
+                                    <div className="text-center py-6 text-sm text-neutral-500 dark:text-neutral-400">
+                                        No results for &quot;{searchQuery}&quot;
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    </div>
+
+                    <button
+                        className="p-2 transition-colors text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
+                        onClick={() => setIsOpen(!isOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                    </button>
+                </div>
             </nav>
 
             {/* Mobile Menu */}
