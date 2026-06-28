@@ -1,4 +1,4 @@
-import { Sparkles, ArrowRight, Target, Code2, Database } from "lucide-react";
+import { Sparkles, ArrowRight, Target, Code2, Database, Bot } from "lucide-react";
 import Link from "next/link";
 
 export default function Hero() {
@@ -9,11 +9,12 @@ export default function Hero() {
                 {/* Left Column */}
                 <div className="lg:col-span-7 flex flex-col items-start text-left">
 
-                    {/* Badge */}
+                    {/* Badge 
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-xs font-semibold text-neutral-600 dark:text-neutral-300 mb-6">
                         <Sparkles className="h-3.5 w-3.5 text-indigo-500" />
                         <span>AI-Powered Full Stack Engineer</span>
                     </div>
+                    */}
 
                     {/* Headline */}
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-neutral-900 dark:text-white max-w-2xl">
@@ -51,7 +52,7 @@ export default function Hero() {
                         </Link>
                     </div>
 
-                    {/* Social Proof */}
+                    {/* Social Proof 
                     <div className="mt-12 flex items-center gap-4">
                         <div className="flex -space-x-3">
                             <div className="w-9 h-9 rounded-full border-2 border-white dark:border-black bg-neutral-700 dark:bg-neutral-800 flex items-center justify-center text-xs font-bold text-neutral-300">JS</div>
@@ -63,6 +64,7 @@ export default function Hero() {
                             Trusted by tech teams &amp; startups.
                         </p>
                     </div>
+                    */}
                 </div>
 
                 {/* Right Column (Stacked Cards) */}
@@ -76,7 +78,7 @@ export default function Hero() {
                         shadow-sm dark:shadow-none
                         transition-all hover:translate-x-1 duration-200 group">
                         <div className="p-3 rounded-xl bg-indigo-50 dark:bg-neutral-900 text-indigo-500 dark:text-indigo-400 group-hover:bg-indigo-100 dark:group-hover:bg-indigo-950/40 transition-all">
-                            <Target className="h-6 w-6" />
+                            <Bot className="h-6 w-6" />
                         </div>
                         <div>
                             <h3 className="text-lg font-semibold text-neutral-900 dark:text-white">Artficial Inteliigence</h3>
