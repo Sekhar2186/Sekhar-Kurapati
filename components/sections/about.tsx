@@ -31,7 +31,7 @@ export default function About() {
     return (
         <section id="about" className="max-w-7xl mx-auto px-6 py-24 md:py-32 w-full">
             <div className="text-center mb-16">
-                <span className="text-purple-500 font-semibold text-sm uppercase tracking-widest">
+                <span className="text-slate-500 font-semibold text-sm uppercase tracking-widest">
                     ABOUT ME
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold mt-4 text-neutral-900 dark:text-white">
@@ -62,7 +62,7 @@ export default function About() {
                 {/* About Matter Column */}
                 <div className="lg:col-span-8 space-y-6">
                     <h3 className="text-2xl md:text-3xl font-extrabold text-neutral-900 dark:text-white leading-tight">
-                        I Build <span className="bg-linear-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent">AI That Ships</span>
+                        I Build <span className="bg-linear-to-r from-emerald-100 to-lime-100 bg-clip-text text-transparent">AI That Ships</span>
                     </h3>
                     <p className="text-neutral-600 dark:text-neutral-350 leading-relaxed text-base">
                         From interactive front-end experiences to backend systems and machine learning models, I enjoy exploring how ideas turn into working software. I care about clean design, thoughtful interactions, and code that’s easy to understand and scale.
