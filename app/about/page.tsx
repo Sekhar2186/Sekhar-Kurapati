@@ -16,15 +16,15 @@ export default function AboutPage() {
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-60 dark:opacity-45">
         <LightRays
           raysOrigin="top-center"
-          raysColor="#22222"
+          raysColor="#E7E7E7"
           raysSpeed={0.6}
-          lightSpread={0.8}
+          lightSpread={1.4}
           rayLength={1.8}
           pulsating={false}
           fadeDistance={1.2}
           saturation={1.2}
           followMouse={true}
-          mouseInfluence={0.08}
+          mouseInfluence={0.18}
           noiseAmount={0.05}
           distortion={0.05}
         />
