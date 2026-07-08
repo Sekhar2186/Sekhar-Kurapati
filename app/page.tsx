@@ -11,6 +11,7 @@ import { Github } from "@/components/ui/icons";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import TechStack from "@/components/sections/tech-stack";
 import GithubActivity from "@/components/sections/github-activity";
+import { BackgroundLines } from "@/components/ui/background-lines";
 
 export default function Home() {
   // Get top 3 featured projects
@@ -159,30 +160,32 @@ export default function Home() {
 
         {/* CTA Banner Section */}
         <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-          <div className="rounded-3xl p-8 md:p-12 text-center relative overflow-hidden border
+          <div className="rounded-3xl text-center relative overflow-hidden border
             bg-neutral-50 dark:bg-neutral-900/40
             border-neutral-150 dark:border-neutral-900
             shadow-sm dark:shadow-none">
-            <span className="text-purple-500 font-semibold text-xs uppercase tracking-widest">
-              Available For Work
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-4 max-w-xl mx-auto text-neutral-900 dark:text-white">
-              Let&apos;s Build Something Intelligent Together
-            </h2>
-            <p className="mt-4 text-neutral-500 dark:text-neutral-400 max-w-md mx-auto text-sm md:text-base leading-relaxed">
-              If you need an autonomous agent integration, full stack developer, or deep learning model pipeline, let&apos;s start the conversation.
-            </p>
-            <div className="mt-8 flex justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold hover:opacity-90 transition-opacity"
-              >
-                Let&apos;s Talk
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-            {/* Soft Ambient decoration */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-purple-500/5 blur-3xl pointer-events-none -z-10" />
+            <BackgroundLines className="py-8 md:py-12 px-8 md:px-12">
+              <span className="relative z-10 text-purple-500 font-semibold text-xs uppercase tracking-widest">
+                Available For Work
+              </span>
+              <h2 className="relative z-10 text-3xl md:text-4xl font-bold mt-4 max-w-xl mx-auto text-neutral-900 dark:text-white">
+                Let&apos;s Build Something Intelligent Together
+              </h2>
+              <p className="relative z-10 mt-4 text-neutral-500 dark:text-neutral-400 max-w-md mx-auto text-sm md:text-base leading-relaxed">
+                If you need an autonomous agent integration, full stack developer, or deep learning model pipeline, let&apos;s start the conversation.
+              </p>
+              <div className="relative z-10 mt-8 flex justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold hover:opacity-90 transition-opacity"
+                >
+                  Let&apos;s Talk
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+              {/* Soft Ambient decoration */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-purple-500/5 blur-3xl pointer-events-none -z-10" />
+            </BackgroundLines>
           </div>
         </section>
       </main>
