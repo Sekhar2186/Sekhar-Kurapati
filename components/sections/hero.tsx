@@ -1,5 +1,6 @@
 import { Sparkles, ArrowRight, Target, Code2, Database, Bot } from "lucide-react";
 import Link from "next/link";
+import TextType from "@/components/TextType";
 
 export default function Hero() {
     return (
@@ -20,7 +21,18 @@ export default function Hero() {
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-neutral-900 dark:text-white max-w-2xl">
                         Build Your Next Big Idea with{" "}
                         <span className="bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                            Sekhar Kurapati
+                            <TextType
+                                text={["Sekhar Kurapati"]}
+                                typingSpeed={60}
+                                initialDelay={300}
+                                loop={false}
+                                showCursor={true}
+                                cursorCharacter="|"
+                                cursorClassName="bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+                                className="bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+                                variableSpeed={undefined}
+                                onSentenceComplete={undefined}
+                            />
                         </span>
                     </h1>
 
@@ -33,7 +45,7 @@ export default function Hero() {
                     <div className="mt-8 flex gap-3 md:gap-4 items-center w-full md:w-auto">
                         <Link
                             href="Resume_Sekhar.pdf"
-                            className="inline-flex items-center justify-center gap-1.5 px-3 py-3 md:px-6 md:py-3 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold hover:opacity-90 transition-opacity flex-1 md:flex-none text-xs sm:text-sm md:text-base text-center"
+                            className="inline-flex items-center justify-center gap-1.5 px-3 py-3 md:px-6 md:py-3 rounded-lg bg-neutral-900 dark:bg-gray-200 text-white dark:text-black font-semibold hover:opacity-90 transition-opacity flex-1 md:flex-none text-xs sm:text-sm md:text-base text-center"
                         >
                             <span className="whitespace-nowrap">Resume/CV</span>
                             <ArrowRight className="h-4 w-4 shrink-0" />
