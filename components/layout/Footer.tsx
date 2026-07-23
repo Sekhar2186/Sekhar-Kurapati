@@ -16,7 +16,7 @@ export default function Footer() {
                                 text="AUTOSTACK*BUILDYOUR*DREAM*WEBSITE*WITHUS*"
                                 onHover="speedUp"
                                 spinDuration={15}
-                                className="text-purple-500 dark:text-purple-400"
+                                className="text-neutral-900 dark:text-white"
                             />
                         </div>
                     </div>
@@ -55,7 +55,7 @@ export default function Footer() {
                         href="https://github.com/somasekharkurapati"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
+                        className="text-neutral-400 hover:text-purple-500 dark:hover:text-purple-400 transition-colors"
                         aria-label="GitHub"
                     >
                         <Github className="h-4.5 w-4.5" />
@@ -64,14 +64,14 @@ export default function Footer() {
                         href="https://linkedin.com/in/somasekhar-kurapati"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
+                        className="text-neutral-400 hover:text-purple-500 dark:hover:text-purple-400 transition-colors"
                         aria-label="LinkedIn"
                     >
                         <Linkedin className="h-4.5 w-4.5" />
                     </a>
                     <a
                         href="mailto:somasekhar.kurapati@example.com"
-                        className="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
+                        className="text-neutral-400 hover:text-purple-500 dark:hover:text-purple-400 transition-colors"
                         aria-label="Email"
                     >
                         <Mail className="h-4.5 w-4.5" />

@@ -45,18 +45,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   };
 
   const getCategoryBadgeClass = (category: string) => {
-    switch (category) {
-      case "AI/ML":
-        return "bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border-indigo-100 dark:border-indigo-900/60";
-      case "Full Stack":
-        return "bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400 border-purple-100 dark:border-purple-900/60";
-      case "Data Science":
-        return "bg-pink-50 dark:bg-pink-950/40 text-pink-600 dark:text-pink-400 border-pink-100 dark:border-pink-900/60";
-      case "Agentic AI":
-        return "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border-emerald-100 dark:border-emerald-900/60";
-      default:
-        return "bg-neutral-50 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 border-neutral-100 dark:border-neutral-800";
-    }
+    return "bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-800";
   };
 
   const getStatusBadgeClass = (status?: string) => {

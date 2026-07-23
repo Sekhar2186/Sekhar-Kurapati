@@ -45,8 +45,8 @@ export default function About() {
                 <div className="lg:col-span-4 flex justify-center">
                     <div className="relative group">
                         {/* Ambient glow behind image */}
-                        <div className="absolute -inset-1 rounded-3xl bg-linear-to-r from-purple-600 to-indigo-600 opacity-20 blur-lg group-hover:opacity-40 transition duration-300" />
-                        <div className="relative w-[280px] h-[330px] sm:w-[320px] sm:h-[380px] overflow-hidden rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 transition-transform duration-500 group-hover:scale-[1.02]">
+                        <div className="absolute -inset-1 rounded-3xl bg-neutral-400 dark:bg-neutral-600 opacity-10 blur-lg group-hover:opacity-20 transition duration-300" />
+                        <div className="relative w-70 h-82.5 sm:w-[320px] sm:h-95 overflow-hidden rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 transition-transform duration-500 group-hover:scale-[1.02]">
                             <Image
                                 src="/sekhar.png"
                                 alt="Sekhar Kurapati"
@@ -62,7 +62,7 @@ export default function About() {
                 {/* About Matter Column */}
                 <div className="lg:col-span-8 space-y-6">
                     <h3 className="text-2xl md:text-3xl font-extrabold text-neutral-900 dark:text-white leading-tight">
-                        I Build <span className="bg-linear-to-r from-emerald-100 to-lime-100 bg-clip-text text-transparent">AI That Ships</span>
+                        I Build <span className="text-neutral-900 dark:text-white">AI That Ships</span>
                     </h3>
                     <p className="text-neutral-600 dark:text-neutral-350 leading-relaxed text-base">
                         From interactive front-end experiences to backend systems and machine learning models, I enjoy exploring how ideas turn into working software. I care about clean design, thoughtful interactions, and code that’s easy to understand and scale.
@@ -86,7 +86,7 @@ export default function About() {
                                     className="relative group flex items-center justify-center w-14 h-14 rounded-2xl border transition-all duration-300 cursor-default
                                         bg-white dark:bg-neutral-950/80
                                         border-neutral-150 dark:border-neutral-900/60
-                                        hover:border-purple-500/40 hover:shadow-md hover:shadow-purple-500/5 hover:-translate-y-1"
+                                        hover:border-purple-500/40 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1"
                                 >
                                     <TechIcon name={tool} className="w-7 h-7" />
                                     {/* Tooltip */}
@@ -112,10 +112,10 @@ export default function About() {
                             className="rounded-3xl border p-8 transition-all duration-300 group hover:-translate-y-1.5
                                 bg-white dark:bg-neutral-950/80
                                 border-neutral-150 dark:border-neutral-900
-                                shadow-sm dark:shadow-none"
+                                shadow-sm dark:shadow-none hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/5"
                         >
-                            <div className="w-14 h-14 rounded-xl bg-purple-500/10 dark:bg-purple-500/5 flex items-center justify-center mb-6">
-                                <Icon className="w-7 h-7 text-purple-500" />
+                            <div className="w-14 h-14 rounded-xl bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center mb-6 group-hover:bg-purple-500/10 dark:group-hover:bg-purple-500/10 transition-colors">
+                                <Icon className="w-7 h-7 text-neutral-900 dark:text-white group-hover:text-purple-500 transition-colors" />
                             </div>
 
                             <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">

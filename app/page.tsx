@@ -4,6 +4,9 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/hero";
+import HeroBento from "@/components/sections/herobento";
+import HeroGlass from "@/components/sections/heroglass";
+import GlassCTA from "@/components/sections/glass-cta";
 import Footer from "@/components/layout/Footer";
 import { projects, Project } from "@/data/projects";
 import { ArrowRight, ExternalLink, Sparkles, Code2, Database, Bot } from "lucide-react";
@@ -34,18 +37,7 @@ export default function Home() {
   };
 
   const getCategoryBadgeClass = (category: string) => {
-    switch (category) {
-      case "AI/ML":
-        return "bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border-indigo-100 dark:border-indigo-900/60";
-      case "Full Stack":
-        return "bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400 border-purple-100 dark:border-purple-900/60";
-      case "Data Science":
-        return "bg-pink-50 dark:bg-pink-950/40 text-pink-600 dark:text-pink-400 border-pink-100 dark:border-pink-900/60";
-      case "Agentic AI":
-        return "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border-emerald-100 dark:border-emerald-900/60";
-      default:
-        return "bg-neutral-50 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 border-neutral-100 dark:border-neutral-800";
-    }
+    return "bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-800";
   };
 
   return (
@@ -54,7 +46,10 @@ export default function Home() {
 
       <main className="grow">
         {/* Hero Section */}
-        <Hero />
+        {/*<Hero />*/}
+        {/*<HeroBento />*/}
+        <HeroBento />
+        {/*<HeroGlass />*/}
 
         {/* Featured Projects Section */}
         <section className="max-w-7xl mx-auto px-6 md:px-12 py-20 border-t border-neutral-100 dark:border-neutral-900/60">
@@ -67,7 +62,7 @@ export default function Home() {
             </div>
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-purple-500 hover:text-purple-600 transition-colors group"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-900 dark:text-white hover:text-purple-500 dark:hover:text-purple-400 transition-colors group"
             >
               Explore All Projects
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -129,7 +124,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-600 dark:text-neutral-400 hover:text-purple-500 dark:hover:text-purple-400 transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors cursor-pointer"
                   >
                     <Github className="h-4 w-4" />
                     Code
@@ -165,7 +160,7 @@ export default function Home() {
             border-neutral-150 dark:border-neutral-900
             shadow-sm dark:shadow-none">
             <BackgroundLines className="py-8 md:py-12 px-8 md:px-12">
-              <span className="relative z-10 text-purple-500 font-semibold text-xs uppercase tracking-widest">
+              <span className="relative z-10 text-neutral-600 dark:text-neutral-400 font-semibold text-xs uppercase tracking-widest">
                 Available For Work
               </span>
               <h2 className="relative z-10 text-3xl md:text-4xl font-bold mt-4 max-w-xl mx-auto text-neutral-900 dark:text-white">
@@ -177,17 +172,20 @@ export default function Home() {
               <div className="relative z-10 mt-8 flex justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-black font-semibold hover:bg-purple-500 hover:text-white dark:hover:bg-purple-500 dark:hover:text-white transition-colors"
                 >
                   Let&apos;s Talk
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
               {/* Soft Ambient decoration */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-purple-500/5 blur-3xl pointer-events-none -z-10" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-neutral-500/5 blur-3xl pointer-events-none -z-10" />
             </BackgroundLines>
           </div>
         </section>
+
+        {/* Creative Glass CTA Section */}
+        {/*<GlassCTA />*/}
       </main>
 
       <Footer />

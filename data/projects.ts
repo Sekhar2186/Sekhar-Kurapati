@@ -18,20 +18,23 @@ export const projects: Project[] = [
   {
     id: "autostack",
     title: "AutoStack",
-    description: "Transforms simple prompts into ready-to-use web applications using agentic AI. Showcases automation, design generation, and modern full-stack workflows.",
+    description: "AI-powered full-stack application generator that converts a plain-English prompt into a complete, production-ready Next.js app — with live WebContainer preview, PDF docs, and ZIP export.",
     category: "Agentic AI",
-    tags: ["Agentic AI", "LLMs", "Next.js", "TypeScript"],
+    tags: ["Next.js 15", "TypeScript", "TailwindCSS v4", "MongoDB", "Google Gemini", "Groq", "WebContainers", "Framer Motion", "PDFKit", "JWT Auth"],
     githubUrl: "https://github.com/Sekhar2186/AutoStack",
     demoUrl: "https://auto-stack-mu.vercel.app/",
     featured: true,
     status: "Building",
-    detailedDescription: "AutoStack is an advanced generative AI platform that converts natural language instructions into fully functional, production-ready web applications. Leveraging agentic workflows with LangGraph and state-of-the-art LLMs, the platform auto-generates the backend logic, interactive frontend interfaces, and database schemas dynamically.",
+    detailedDescription: "AutoStack is an AI-powered full-stack application generator that converts natural language prompts into complete production-ready Next.js applications. Unlike simple UI generators, AutoStack plans, designs, validates, fixes, previews, and exports entire applications through a multi-agent pipeline: Planner → Component Agent → Route Agent → Docs Agent → Page Generator → Code Validator → Fix Agent → WebContainer Preview → Export. Built with Next.js 15, MongoDB, JWT Auth, Google Gemini, Groq, StackBlitz WebContainers, and PDFKit. Language breakdown: TypeScript 94.1%, JavaScript 3.7%, CSS 2.2%.",
     features: [
-      "Natural Language to Full-Stack App generation in under 2 minutes",
-      "Multi-Agent collaboration powered by LangGraph for robust error handling and refinement",
-      "Automated theme generation with customized styling and component assemblies",
-      "Sandboxed code execution and validation before delivery",
-      "Seamless export/download options for local development"
+      "Multi-Agent Architecture: Planner, Component, Route, Docs, Page Generator, Validator & Fix agents work in sequence",
+      "Intelligent Code Validation: auto-detects and fixes Next.js App Router rules, missing imports, invalid HTML, duplicate components & React errors",
+      "Live WebContainer Preview: integrated StackBlitz runtime with automatic npm install, project boot, error console & real-time preview",
+      "Multi-Provider AI: Google Gemini & Groq with automatic retry, intelligent fallback, exponential backoff & error classification",
+      "Full Project Export: source code ZIP, auto-generated PDF documentation, architecture document & project report",
+      "Complete App Generation: routes, pages, components, layouts, architecture — not just UI snippets",
+      "AI-generated PDF Documentation and Architecture reports alongside every exported project",
+      "92 commits of active development — production deployed on Vercel"
     ]
   },
   {

@@ -33,25 +33,14 @@ export default function ProjectSection() {
     };
 
     const getCategoryBadgeClass = (category: string) => {
-        switch (category) {
-            case "AI/ML":
-                return "bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border-indigo-100 dark:border-indigo-900/60";
-            case "Full Stack":
-                return "bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400 border-purple-100 dark:border-purple-900/60";
-            case "Data Science":
-                return "bg-pink-50 dark:bg-pink-950/40 text-pink-600 dark:text-pink-400 border-pink-100 dark:border-pink-900/60";
-            case "Agentic AI":
-                return "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border-emerald-100 dark:border-emerald-900/60";
-            default:
-                return "bg-neutral-50 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 border-neutral-100 dark:border-neutral-800";
-        }
+        return "bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-800";
     };
 
     return (
         <section className="max-w-7xl mx-auto px-6 py-24 md:py-32 w-full">
             {/* Header */}
             <div className="text-center mb-16">
-                <span className="text-purple-500 font-semibold text-sm uppercase tracking-widest">
+                <span className="text-neutral-600 dark:text-neutral-400 font-semibold text-sm uppercase tracking-widest">
                     Projects
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold mt-4 text-neutral-900 dark:text-white">
@@ -72,7 +61,7 @@ export default function ProjectSection() {
                             onClick={() => setSelectedCategory(category)}
                             className={`px-5 py-2.5 rounded-full text-sm font-semibold border flex items-center gap-2 transition-all duration-200 cursor-pointer
                                 ${isActive
-                                    ? "bg-purple-500 border-purple-500 text-white shadow-md shadow-purple-500/20"
+                                    ? "bg-neutral-900 dark:bg-white border-neutral-900 dark:border-white text-white dark:text-black shadow-md shadow-neutral-900/10 dark:shadow-white/10"
                                     : "bg-white dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700"
                                 }`}
                         >
@@ -143,7 +132,7 @@ export default function ProjectSection() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={(e) => e.stopPropagation()}
-                                className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-600 dark:text-neutral-400 hover:text-purple-500 dark:hover:text-purple-400 transition-colors cursor-pointer"
+                                className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors cursor-pointer"
                             >
                                 <Github className="h-4 w-4" />
                                 Code

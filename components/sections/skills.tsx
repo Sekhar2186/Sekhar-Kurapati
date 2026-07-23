@@ -32,11 +32,11 @@ const skillCategories = [
 ];
 
 const colorMap: Record<string, { badge: string }> = {
-  indigo: { badge: "bg-indigo-500/10 text-indigo-500 border-indigo-500/20" },
-  purple: { badge: "bg-purple-500/10 text-purple-500 border-purple-500/20" },
-  pink: { badge: "bg-pink-500/10 text-pink-500 border-pink-500/20" },
-  violet: { badge: "bg-violet-500/10 text-violet-500 border-violet-500/20" },
-  blue: { badge: "bg-blue-500/10 text-blue-500 border-blue-500/20" },
+  indigo: { badge: "bg-neutral-900 dark:bg-white text-white dark:text-black border-neutral-900 dark:border-white shadow-sm" },
+  purple: { badge: "bg-neutral-900 dark:bg-white text-white dark:text-black border-neutral-900 dark:border-white shadow-sm" },
+  pink: { badge: "bg-neutral-900 dark:bg-white text-white dark:text-black border-neutral-900 dark:border-white shadow-sm" },
+  violet: { badge: "bg-neutral-900 dark:bg-white text-white dark:text-black border-neutral-900 dark:border-white shadow-sm" },
+  blue: { badge: "bg-neutral-900 dark:bg-white text-white dark:text-black border-neutral-900 dark:border-white shadow-sm" },
 };
 
 // Extras shown as icon tiles in the "Also familiar with" section
@@ -56,7 +56,7 @@ export default function Skills() {
     <section className="max-w-7xl mx-auto px-6 py-24 md:py-32">
       {/* Header */}
       <div className="text-center mb-16">
-        <span className="text-purple-500 font-semibold text-sm uppercase tracking-widest">
+        <span className="text-neutral-600 dark:text-neutral-400 font-semibold text-sm uppercase tracking-widest">
           What I Work With
         </span>
         <h2 className="text-4xl md:text-5xl font-bold mt-4 text-neutral-900 dark:text-white">
@@ -97,7 +97,7 @@ export default function Skills() {
             className="relative group flex flex-col items-center justify-center p-6 rounded-3xl border transition-all duration-300 w-28 h-28 cursor-default
               bg-white dark:bg-neutral-950/80
               border-neutral-150 dark:border-neutral-900/60
-              hover:border-purple-500/40 hover:shadow-md hover:shadow-purple-500/5 hover:-translate-y-1"
+              hover:border-purple-500/40 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1"
           >
             <TechIcon name={skillName} className="w-10 h-10" />
 
@@ -122,7 +122,7 @@ export default function Skills() {
               className="relative group flex items-center justify-center w-14 h-14 rounded-2xl border transition-all duration-300 cursor-default
                 bg-white dark:bg-neutral-950/80
                 border-neutral-150 dark:border-neutral-900/60
-                hover:border-purple-500/40 hover:shadow-md hover:shadow-purple-500/5 hover:-translate-y-1"
+                hover:border-purple-500/40 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1"
             >
               <TechIcon name={tool} className="w-7 h-7" />
               {/* Tooltip */}

@@ -80,7 +80,7 @@ export default function Contact() {
         <section className="max-w-7xl mx-auto px-6 py-24 md:py-32 w-full">
             {/* Header */}
             <div className="text-center mb-16">
-                <span className="text-purple-500 font-semibold text-sm uppercase tracking-widest">
+                <span className="text-neutral-600 dark:text-neutral-400 font-semibold text-sm uppercase tracking-widest">
                     Contact Me
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold mt-4 text-neutral-900 dark:text-white">
@@ -107,7 +107,7 @@ export default function Contact() {
                                 const Icon = detail.icon;
                                 return (
                                     <div key={index} className="flex items-center gap-4 group">
-                                        <div className="w-12 h-12 rounded-2xl bg-purple-50 dark:bg-neutral-900 text-purple-500 flex items-center justify-center border border-purple-100 dark:border-neutral-800">
+                                        <div className="w-12 h-12 rounded-2xl bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white flex items-center justify-center border border-neutral-200 dark:border-neutral-800 group-hover:bg-purple-500/10 group-hover:border-purple-500/30 group-hover:text-purple-500 transition-all">
                                             <Icon className="w-5 h-5" />
                                         </div>
                                         <div>
@@ -161,7 +161,7 @@ export default function Contact() {
                                     value={formState.name}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 rounded-xl border bg-transparent text-sm text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition-all"
+                                    className="w-full px-4 py-3 rounded-xl border bg-transparent text-sm text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-900/20 dark:focus:ring-white/20 focus:border-neutral-900 dark:focus:border-white transition-all"
                                     placeholder="Enter Your Name"
                                 />
                             </div>
@@ -177,7 +177,7 @@ export default function Contact() {
                                     value={formState.email}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 rounded-xl border bg-transparent text-sm text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition-all"
+                                    className="w-full px-4 py-3 rounded-xl border bg-transparent text-sm text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-900/20 dark:focus:ring-white/20 focus:border-neutral-900 dark:focus:border-white transition-all"
                                     placeholder="example@gmail.com"
                                 />
                             </div>
@@ -194,7 +194,7 @@ export default function Contact() {
                                 value={formState.subject}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-3 rounded-xl border bg-transparent text-sm text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition-all"
+                                className="w-full px-4 py-3 rounded-xl border bg-transparent text-sm text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-900/20 dark:focus:ring-white/20 focus:border-neutral-900 dark:focus:border-white transition-all"
                                 placeholder="Project Collaboration"
                             />
                         </div>
@@ -210,7 +210,7 @@ export default function Contact() {
                                 onChange={handleChange}
                                 required
                                 rows={5}
-                                className="w-full px-4 py-3 rounded-xl border bg-transparent text-sm text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition-all resize-none"
+                                className="w-full px-4 py-3 rounded-xl border bg-transparent text-sm text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-900/20 dark:focus:ring-white/20 focus:border-neutral-900 dark:focus:border-white transition-all resize-none"
                                 placeholder="Write your message here..."
                             />
                         </div>
@@ -232,11 +232,11 @@ export default function Contact() {
                         <button
                             type="submit"
                             disabled={status === "sending"}
-                            className="w-full flex items-center justify-center gap-2 py-4 rounded-xl font-semibold text-white bg-purple-500 hover:bg-purple-600 disabled:bg-purple-400 active:scale-[0.98] transition-all cursor-pointer shadow-md shadow-purple-500/10"
+                            className="w-full flex items-center justify-center gap-2 py-4 rounded-xl font-semibold text-white dark:text-neutral-900 bg-neutral-900 dark:bg-white hover:bg-neutral-800 dark:hover:bg-neutral-200 disabled:bg-neutral-300 dark:disabled:bg-neutral-700 active:scale-[0.98] transition-all cursor-pointer shadow-md shadow-neutral-900/10 dark:shadow-white/10"
                         >
                             {status === "sending" ? (
                                 <>
-                                    <svg className="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                                    <svg className="animate-spin h-5 w-5 text-current" fill="none" viewBox="0 0 24 24">
                                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                                     </svg>
