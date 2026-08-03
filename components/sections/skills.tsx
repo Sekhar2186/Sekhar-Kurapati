@@ -27,7 +27,7 @@ const skillCategories = [
   {
     label: "Tools",
     color: "blue",
-    skills: ["Git", "Docker", "CI/CD", "Vercel", "pnpm", "Turbo", "MongoDB", "Redis"],
+    skills: ["Git", "Docker", "CI/CD", "Vercel", "n8n", "WebContainers", "pnpm", "Turbo", "MongoDB", "Redis"],
   },
 ];
 

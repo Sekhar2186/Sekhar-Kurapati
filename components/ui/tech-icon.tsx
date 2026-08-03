@@ -10,6 +10,7 @@ import {
   SiHtml5, SiCss, SiGithub,
   SiKaggle, SiOpenai, SiStreamlit, SiGooglecolab,
   SiPostman, SiFigma, SiNotion, SiFlask, SiOllama,
+  SiN8N, SiStackblitz, SiGooglegemini
 } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
 import { VscTerminal } from "react-icons/vsc";
@@ -84,6 +85,13 @@ export function TechIcon({ name, className = "w-7 h-7" }: IconProps & { name: st
     case "streamlit":      return <SiStreamlit      className={cls} style={{ color: "#FF4B4B" }} />;
     case "google colab":   return <SiGooglecolab    className={cls} style={{ color: "#F9AB00" }} />;
     case "ollama":         return <SiOllama         className={cls} />;
+    case "google gemini":
+    case "gemini":         return <SiGooglegemini   className={cls} style={{ color: "#8E75B2" }} />;
+    case "groq":           return <BiBrain          className={cls} style={{ color: "#F55036" }} />;
+
+    // Automation & Extra Tools
+    case "n8n":            return <SiN8N            className={cls} style={{ color: "#FF6E6C" }} />;
+    case "webcontainers":  return <SiStackblitz     className={cls} style={{ color: "#1389FD" }} />;
 
     // Productivity & Design
     case "postman":        return <SiPostman        className={cls} style={{ color: "#FF6C37" }} />;
