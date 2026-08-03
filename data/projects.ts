@@ -7,7 +7,7 @@ export interface Project {
   githubUrl: string;
   demoUrl?: string;
   featured: boolean;
-  
+
   // Detailed view fields
   status?: string;
   detailedDescription?: string;
@@ -130,6 +130,44 @@ export const projects: Project[] = [
       "Machine learning model training pipeline using Random Forest and SVM classifiers",
       "Integration layer to translate gestures into keypresses or mouse operations",
       "Visual overlay debugging window displaying hand skeleton tracks"
+    ]
+  },
+  {
+    id: "ai-daily-learning-assistant",
+    title: "AI Daily Learning Assistant",
+    description: "An AI-powered daily learning assistant built with n8n, Gemini AI, RSS feeds, Python, and Gmail automation.",
+    category: "Agentic AI",
+    tags: ["n8n", "Google Gemini", "Python", "RSS", "Gmail Automation"],
+    githubUrl: "https://github.com/Sekhar2186/AI-Daily-Learning-Assistant",
+    demoUrl: "",
+    featured: true,
+    status: "All Systems Operational",
+    detailedDescription: "An AI-powered automation workflow built with n8n, Google Gemini, Python, RSS Feeds, and Gmail that delivers a beautifully formatted daily AI learning report directly to your inbox. Every day the workflow collects AI news from multiple trusted RSS feeds, filters the latest articles, uses Google Gemini to analyze and summarize them, extracts the most important industry insights, suggests learning topics, and builds a professional HTML email.",
+    features: [
+      "Collects AI news from multiple RSS feeds",
+      "Uses Google Gemini for intelligent summarization",
+      "Generates structured JSON using AI",
+      "Beautiful HTML email report",
+      "Fully built using n8n"
+    ]
+  },
+  {
+    id: "jarvis-like-assistant",
+    title: "Jarvis-Like Assistant",
+    description: "A Python-based AI voice assistant featuring speech recognition, text-to-speech, wake word detection, and GUI interface.",
+    category: "AI/ML",
+    tags: ["Python", "SpeechRecognition", "Pyttsx3", "OpenWakeWord", "FastAPI"],
+    githubUrl: "https://github.com/Sekhar2186/Jarvis-Like-Assistant",
+    demoUrl: "",
+    featured: true,
+    status: "All Systems Operational",
+    detailedDescription: "A desktop-based AI voice assistant built using Python, inspired by Jarvis. It integrates speech recognition (Google Speech Recognition API), text-to-speech (pyttsx3), and wake word detection (openwakeword). It features a Graphical User Interface (GUI) and connects to AI tools and local execution logic for a seamless voice-controlled experience.",
+    features: [
+      "Voice command processing with Google Speech Recognition",
+      "Text-to-speech feedback via pyttsx3",
+      "Wake word detection for hands-free activation",
+      "Interactive Graphical User Interface (GUI)",
+      "Memory module for conversation context saving"
     ]
   }
 ];
