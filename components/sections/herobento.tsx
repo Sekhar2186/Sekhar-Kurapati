@@ -89,7 +89,7 @@ export default function HeroBento() {
                 {/* Portfolio Projects Card */}
                 <div className="md:col-span-1 p-6 rounded-3xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 flex flex-col justify-center items-center text-center hover:scale-[1.02] transition-transform duration-300">
                     <Briefcase className="h-8 w-8 text-neutral-400 mb-3" />
-                    <h3 className="text-base font-semibold text-neutral-900 dark:text-white">6+ Projects</h3>
+                    <h3 className="text-base font-semibold text-neutral-900 dark:text-white">7+ Projects</h3>
                     <p className="text-sm text-neutral-500 dark:text-neutral-400">Built & Deployed</p>
                 </div>
 
