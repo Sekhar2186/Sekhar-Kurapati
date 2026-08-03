@@ -45,7 +45,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "MongoDB", "TailwindCSS"],
     githubUrl: "https://github.com/Sekhar2186/Luxro",
     demoUrl: "https://luxro-ten.vercel.app/",
-    featured: true,
+    featured: false,
     status: "Completed",
     detailedDescription: "Luxro is a modern full-stack eCommerce platform designed for high performance and optimal user experience. Built with Next.js and TypeScript, it features a scalable serverless architecture, secure user authentication with JWT/OAuth, real-time database management using MongoDB, and an intuitive responsive design powered by TailwindCSS.",
     features: [
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     tags: ["Python", "Numpy", "Pandas", "Scikit-Learn", "XGBoost"],
     githubUrl: "https://github.com/Sekhar2186/cancer-classification",
     demoUrl: "",
-    featured: true,
+    featured: false,
     status: "All Systems Operational",
     detailedDescription: "This machine learning research project focuses on identifying and classifying cancer sub-types by analyzing high-dimensional genomic and gene expression datasets. Due to the high dimensionality of genomic data, the project implements advanced feature selection algorithms and dimensionality reduction (PCA) prior to feeding features into optimized classification models like XGBoost and Support Vector Machines.",
     features: [
