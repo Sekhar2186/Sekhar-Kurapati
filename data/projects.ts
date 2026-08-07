@@ -45,7 +45,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "MongoDB", "TailwindCSS"],
     githubUrl: "https://github.com/Sekhar2186/Luxro",
     demoUrl: "https://luxro-ten.vercel.app/",
-    featured: false,
+    featured: true,
     status: "Completed",
     detailedDescription: "Luxro is a modern full-stack eCommerce platform designed for high performance and optimal user experience. Built with Next.js and TypeScript, it features a scalable serverless architecture, secure user authentication with JWT/OAuth, real-time database management using MongoDB, and an intuitive responsive design powered by TailwindCSS.",
     features: [
