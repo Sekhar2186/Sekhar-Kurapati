@@ -42,3 +42,5 @@ next-env.d.ts
 
 #previous Search button 
 /components/ui/search-button.tsx
+#improvements file 
+/improvement.txt
