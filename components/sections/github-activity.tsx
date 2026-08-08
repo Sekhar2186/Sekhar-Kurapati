@@ -53,7 +53,7 @@ export default function GithubActivity() {
       {/* Heatmap Card */}
       <div className="rounded-2xl px-10 border border-neutral-100 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/40 p-6 overflow-x-auto">
         {mounted ? (
-          <div className="min-w-[600px]">
+          <div className="min-w-150">
             <GitHubCalendar
               username={GITHUB_USERNAME}
               colorScheme={isDark ? "dark" : "light"}
@@ -73,7 +73,7 @@ export default function GithubActivity() {
           </div>
         ) : (
           /* Skeleton while waiting for theme resolution */
-          <div className="min-w-[600px] h-36 animate-pulse rounded-xl bg-neutral-200 dark:bg-neutral-800" />
+          <div className="min-w-150 h-36 animate-pulse rounded-xl bg-neutral-200 dark:bg-neutral-800" />
         )}
       </div>
     </section>
