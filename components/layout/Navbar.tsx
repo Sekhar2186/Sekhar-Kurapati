@@ -10,8 +10,8 @@ import { projects } from '@/data/projects';
 const links = [
     { name: "Home", href: "/", icon: Home },
     { name: "About", href: "/about", icon: User },
-    { name: "Skills", href: "/skills", icon: Zap },
     { name: "Projects", href: "/projects", icon: Briefcase },
+    { name: "Skills", href: "/skills", icon: Zap },
     { name: "Contact", href: "/contact", icon: Mail },
 ];
 
