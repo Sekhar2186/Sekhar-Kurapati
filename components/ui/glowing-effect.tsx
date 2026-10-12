@@ -3,12 +3,14 @@
 import { memo, useCallback, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
+export type GlowingEffectVariant = "default" | "obsidian" | "black" | "premium" | "white" | "celestial";
+
 interface GlowingEffectProps {
   blur?: number;
   inactiveZone?: number;
   proximity?: number;
   spread?: number;
-  variant?: "default" | "white";
+  variant?: GlowingEffectVariant;
   glow?: boolean;
   className?: string;
   disabled?: boolean;
@@ -22,7 +24,7 @@ export const GlowingEffect = memo(
     inactiveZone = 0.7,
     proximity = 0,
     spread = 20,
-    variant = "default",
+    variant = "obsidian",
     glow = false,
     className,
     movementDuration = 2,
@@ -86,7 +88,8 @@ export const GlowingEffect = memo(
             (Math.atan2(mouseY - centerY, mouseX - centerX) * 180) / Math.PI;
 
           element.style.setProperty("--active", "1");
-          element.style.setProperty("--start", `${angle + 90}deg`);
+          // Center the peak of the conic gradient directly on the cursor
+          element.style.setProperty("--start", `${angle + 90 - spread}deg`);
           element.style.setProperty("--spread", `${spread}deg`);
           element.style.setProperty("--border-width", `${borderWidth}px`);
           element.style.setProperty("--blur", `${blur}px`);
@@ -112,10 +115,37 @@ export const GlowingEffect = memo(
       };
     }, [disabled, handleMove]);
 
-    const gradientStyle =
-      variant === "white"
-        ? "conic-gradient(from var(--start, 0deg), #ffffff00 0deg, white var(--spread, 20deg), #ffffff00 calc(var(--spread, 20deg) + 10deg))"
-        : "conic-gradient(from var(--start, 0deg), #a855f700 0deg, #a855f7 var(--spread, 20deg), #6366f1 calc(var(--spread, 20deg) * 1.5), #a855f700 calc(var(--spread, 20deg) + 20deg))";
+    const getGradient = (v: GlowingEffectVariant) => {
+      switch (v) {
+        case "white":
+          return "conic-gradient(from var(--start, 0deg), transparent 0deg, rgba(255, 255, 255, 0.15) calc(var(--spread, 20deg) * 0.35), rgba(255, 255, 255, 0.65) calc(var(--spread, 20deg) * 0.7), #ffffff var(--spread, 20deg), rgba(255, 255, 255, 0.65) calc(var(--spread, 20deg) * 1.3), rgba(255, 255, 255, 0.15) calc(var(--spread, 20deg) * 1.65), transparent calc(var(--spread, 20deg) * 2))";
+        case "celestial":
+          return "conic-gradient(from var(--start, 0deg), transparent 0deg, rgba(56, 189, 248, 0.25) calc(var(--spread, 20deg) * 0.35), rgba(129, 140, 248, 0.6) calc(var(--spread, 20deg) * 0.7), #ffffff var(--spread, 20deg), rgba(192, 132, 252, 0.6) calc(var(--spread, 20deg) * 1.3), rgba(244, 114, 182, 0.25) calc(var(--spread, 20deg) * 1.65), transparent calc(var(--spread, 20deg) * 2))";
+        case "premium":
+          return "conic-gradient(from var(--start, 0deg), transparent 0deg, rgba(255, 255, 255, 0.08) calc(var(--spread, 20deg) * 0.25), rgba(226, 232, 240, 0.55) calc(var(--spread, 20deg) * 0.65), #ffffff var(--spread, 20deg), rgba(226, 232, 240, 0.55) calc(var(--spread, 20deg) * 1.35), rgba(255, 255, 255, 0.08) calc(var(--spread, 20deg) * 1.75), transparent calc(var(--spread, 20deg) * 2))";
+        case "default":
+        case "obsidian":
+        case "black":
+        default:
+          // Stealth Obsidian / Dark Smoke: Deep jet-black beam framed by rich dark charcoal & luminous graphite smoke
+          return "conic-gradient(from var(--start, 0deg), transparent 0deg, rgba(161, 161, 170, 0.2) calc(var(--spread, 20deg) * 0.2), rgba(228, 228, 231, 0.6) calc(var(--spread, 20deg) * 0.5), rgba(39, 39, 42, 0.95) calc(var(--spread, 20deg) * 0.75), #000000 var(--spread, 20deg), rgba(39, 39, 42, 0.95) calc(var(--spread, 20deg) * 1.25), rgba(228, 228, 231, 0.6) calc(var(--spread, 20deg) * 1.5), rgba(161, 161, 170, 0.2) calc(var(--spread, 20deg) * 1.8), transparent calc(var(--spread, 20deg) * 2))";
+      }
+    };
+
+    const getBloomGradient = (v: GlowingEffectVariant) => {
+      switch (v) {
+        case "default":
+        case "obsidian":
+        case "black":
+          // Deep ambient smoke halo
+          return "conic-gradient(from var(--start, 0deg), transparent 0deg, rgba(113, 113, 122, 0.35) calc(var(--spread, 20deg) * 0.35), rgba(0, 0, 0, 0.95) var(--spread, 20deg), rgba(113, 113, 122, 0.35) calc(var(--spread, 20deg) * 1.65), transparent calc(var(--spread, 20deg) * 2))";
+        default:
+          return getGradient(v);
+      }
+    };
+
+    const gradientStyle = getGradient(variant);
+    const bloomGradientStyle = getBloomGradient(variant);
 
     return (
       <div
@@ -131,12 +161,28 @@ export const GlowingEffect = memo(
           } as React.CSSProperties
         }
       >
-        {/* The glowing border layer */}
+        {/* Soft ambient bloom layer (radiant halo around card border) */}
         <div
-          className="absolute inset-0 rounded-[inherit]"
+          className="pointer-events-none absolute -inset-1px rounded-[inherit]"
           style={{
             opacity: "var(--active)",
-            transition: `opacity ${movementDuration * 0.3}s ease`,
+            transition: `opacity ${movementDuration * 0.25}s ease`,
+            background: bloomGradientStyle,
+            WebkitMask:
+              "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+            WebkitMaskComposite: "xor",
+            maskComposite: "exclude",
+            padding: `calc(var(--border-width) + 3px)`,
+            filter: "blur(6px)",
+          }}
+        />
+
+        {/* Crisp specular border highlight */}
+        <div
+          className="pointer-events-none absolute inset-0 rounded-[inherit]"
+          style={{
+            opacity: "var(--active)",
+            transition: `opacity ${movementDuration * 0.25}s ease`,
             padding: `var(--border-width)`,
             background: gradientStyle,
             WebkitMask:
@@ -150,7 +196,7 @@ export const GlowingEffect = memo(
         {/* Optional always-visible glow when 'glow' prop is true */}
         {glow && (
           <div
-            className="absolute inset-0 rounded-[inherit] opacity-30"
+            className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-25"
             style={{
               background: gradientStyle,
               WebkitMask:

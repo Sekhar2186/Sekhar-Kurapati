@@ -95,7 +95,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 group-hover:text-purple-500 transition-colors">
+                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 grow">
@@ -135,7 +135,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-600 dark:text-neutral-400 hover:text-purple-500 dark:hover:text-purple-400 transition-colors cursor-pointer"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors cursor-pointer"
                     >
                       <ExternalLink className="h-4 w-4" />
                       Live
