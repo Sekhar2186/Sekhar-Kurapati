@@ -107,7 +107,7 @@ export default function Contact() {
                                 const Icon = detail.icon;
                                 return (
                                     <div key={index} className="flex items-center gap-4 group">
-                                        <div className="w-12 h-12 rounded-2xl bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white flex items-center justify-center border border-neutral-200 dark:border-neutral-800 group-hover:bg-purple-500/10 group-hover:border-purple-500/30 group-hover:text-purple-500 transition-all">
+                                        <div className="w-12 h-12 rounded-2xl bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white flex items-center justify-center border border-neutral-200 dark:border-neutral-800 group-hover:bg-gray-600/10 group-hover:border-gray-500/30 group-hover:text-gray-500 transition-all">
                                             <Icon className="w-5 h-5" />
                                         </div>
                                         <div>
@@ -119,7 +119,7 @@ export default function Contact() {
                                                     href={detail.href}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="block text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-purple-500 dark:hover:text-purple-400 transition-colors break-all"
+                                                    className="block text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-gray-500 dark:hover:text-gray-400 transition-colors break-all"
                                                 >
                                                     {detail.value}
                                                 </a>
